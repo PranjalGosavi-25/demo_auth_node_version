@@ -1,0 +1,10 @@
+{
+  "BACKEND_URL": {
+    "AUTH_SERVICE": "http://localhost:8080/auth-service",
+    "CORE_SERVICE": "http://localhost:8081/core-service"
+  },
+  "FRONTEND_URL": {
+    "APP": "http://localhost:3001",
+    "CARBON_NEWTRAL": "http://localhost:3000"
+  }
+}

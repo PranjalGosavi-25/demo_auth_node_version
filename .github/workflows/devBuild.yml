@@ -1,0 +1,49 @@
+name: Dev Env Deployment
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+  GITHUB_TOKEN: ${{ secrets.NEWTRAL_IO_GITHUB_TOKEN }}
+on:
+  push:
+    branches:
+      - dev
+jobs:
+  Deploy:
+    name: Build & Deploy for Dev
+    runs-on: ubuntu-latest
+    steps:
+      - name: Slack Notification (Job Start)
+        uses: rtCamp/action-slack-notify@v2.2.0
+        env:
+          SLACK_WEBHOOK: ${{ secrets.DEV_DEPLOYMENT_ALERTS_SLACK_WEBHOOK}}
+          SLACK_COLOR: '#eeeeee'
+          SLACK_MESSAGE: 'Deployment Started for ${{ github.event.repository.name }} (${{ github.event.head_commit.message }})'
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.NEWTRAL_IO_GITHUB_TOKEN }}
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+      - name: Authenticate with private repository
+        run: git config --global url."https://team-newtral:$GITHUB_TOKEN@github.com/".insteadOf "https://github.com/"
+      - name: Pull Vercel Environment Information
+        run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Build Project Artifacts
+        run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Deploy Project Artifacts to Vercel
+        run: |
+          vercel deploy --prebuilt --archive=tgz --token=${{ secrets.VERCEL_TOKEN }} > domain.txt
+          vercel alias --scope ${{ env.VERCEL_ORG_ID }} --token=${{ secrets.VERCEL_TOKEN }} set `cat domain.txt` auth.dev.newtral.io
+
+      - name: Slack Notification (Job End)
+        uses: rtCamp/action-slack-notify@v2.2.0
+        env:
+          SLACK_WEBHOOK: ${{ secrets.DEV_DEPLOYMENT_ALERTS_SLACK_WEBHOOK}}
+          SLACK_COLOR: '#00ff00'
+          SLACK_MESSAGE: 'Deployment Completed for ${{ github.event.repository.name }} (${{ github.event.head_commit.message }})'
+      - name: Slack Notification (Job Failure)
+        uses: rtCamp/action-slack-notify@v2.2.0
+        env:
+          SLACK_WEBHOOK: ${{ secrets.DEV_DEPLOYMENT_ALERTS_SLACK_WEBHOOK}}
+          SLACK_COLOR: '#ff0000'
+          SLACK_MESSAGE: 'Deployment Failed for ${{ github.event.repository.name }} (${{ github.event.head_commit.message }})'
+        if: failure()

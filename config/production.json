@@ -1,0 +1,10 @@
+{
+  "BACKEND_URL": {
+    "AUTH_SERVICE": "https://prod-v2.newtral.io/auth-service",
+    "CORE_SERVICE": "https://prod-v2.newtral.io/core-service"
+  },
+  "FRONTEND_URL": {
+    "APP": "https://app.newtral.io",
+    "CARBON_NEWTRAL": "https://carbon.newtral.io"
+  }
+}
