@@ -7,7 +7,7 @@ import { StateEnum } from '@enums/common';
 import { AuthService } from '@services/AuthService';
 import { Tag, message } from 'antd';
 import config from 'config';
-import { ArrowRightOutlineIcon } from 'newtral-icons';
+import { ArrowRightOutlineIcon } from '@components/Icons';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { useQuery } from 'react-query';
@@ -130,8 +130,7 @@ export function SelectCompanyScreen() {
                   <div className={`flex items-center`}>
                     <ArrowRightOutlineIcon
                       className="text-gray-600"
-                      width={20}
-                      height={20}
+                      size={20}
                     />
                   </div>
                 </div>

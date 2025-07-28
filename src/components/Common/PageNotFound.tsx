@@ -1,5 +1,5 @@
 import { Button, Typography } from 'antd';
-import { ArrowLeftOutlineIcon } from 'newtral-icons';
+import { ArrowLeftOutlineIcon } from '@components/Icons';
 import Link from 'next/link';
 
 export const PageNotFound = (props: { fullScreen?: boolean }) => {

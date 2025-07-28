@@ -1,6 +1,6 @@
 import { PlanEnum } from '@constants/plan';
 import { Switch } from 'antd';
-import { CheckCircleOutlineIcon } from 'newtral-icons';
+import { CheckCircleOutlineIcon } from '@components/Icons';
 import React from 'react';
 
 function PlanDetail(props: {

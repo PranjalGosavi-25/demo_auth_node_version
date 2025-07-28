@@ -1,8 +1,4 @@
-import {
-  CheckDone01OutlineIcon,
-  CheckOutlineIcon,
-  HelpCircleOutlineIcon
-} from 'newtral-icons';
+import { HelpCircleOutlineIcon, CheckCircleOutlineIcon } from '@components/Icons';
 import React from 'react';
 import { FeaturedIcon } from './FeaturedIcon';
 import { Button } from 'antd';
@@ -48,7 +44,7 @@ function SuccessScreen(props: {
           <img src="/images/newtral-white.svg" alt="" />
         </div>
         <div className="flex items-center w-fit" title="Help">
-          <HelpCircleOutlineIcon
+          <span
             className="text-white cursor-pointer"
             onClick={() => {
               if (window.Intercom) {
@@ -57,7 +53,9 @@ function SuccessScreen(props: {
                 window.open('https://help.newtral.io', '_blank');
               }
             }}
-          />
+          >
+            <HelpCircleOutlineIcon />
+          </span>
         </div>
       </div>
 
@@ -67,7 +65,7 @@ function SuccessScreen(props: {
       >
         <div className="w-full md:w-4/5 max-w-7xl flex flex-col items-center">
           <FeaturedIcon
-            icon={CheckOutlineIcon}
+            icon={CheckCircleOutlineIcon}
             color="gray"
             size={'lg'}
             variant={'double-circle-dark'}

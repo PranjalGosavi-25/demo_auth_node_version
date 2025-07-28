@@ -3,7 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import * as Yup from 'yup';
 import { SpecialKeyIcon } from '@components/UI/SpecialIcons';
-import { ArrowLeftOutlineIcon } from 'newtral-icons';
+import { ArrowLeftOutlineIcon } from '@components/Icons';
 import { useFormik } from 'formik';
 import Image from 'next/image';
 import { SpecialMailIcon } from '@components/UI/SpecialIcons';

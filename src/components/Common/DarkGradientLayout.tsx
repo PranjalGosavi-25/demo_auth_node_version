@@ -1,4 +1,4 @@
-import { HelpCircleOutlineIcon } from 'newtral-icons';
+import { HelpCircleOutlineIcon } from '@components/Icons';
 import React from 'react';
 
 function DarkGradientLayout(props: {
@@ -15,7 +15,7 @@ function DarkGradientLayout(props: {
           </div>
           <div className="flex items-center gap-4 w-fit" title="Help">
             <div className="flex items-center w-fit" title="Help">
-              <HelpCircleOutlineIcon
+              <span
                 className="text-white cursor-pointer"
                 onClick={() => {
                   if (window.Intercom) {
@@ -24,7 +24,9 @@ function DarkGradientLayout(props: {
                     window.open('https://help.newtral.io', '_blank');
                   }
                 }}
-              />
+              >
+                <HelpCircleOutlineIcon />
+              </span>
             </div>
           </div>
         </div>

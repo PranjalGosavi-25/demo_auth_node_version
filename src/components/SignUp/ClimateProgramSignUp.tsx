@@ -4,7 +4,7 @@ import { StateEnum } from '@enums/common';
 import { AuthService } from '@services/AuthService';
 import { Button, Input, message } from 'antd';
 import { useFormik } from 'formik';
-import { CheckCircleOutlineIcon } from 'newtral-icons';
+import { CheckCircleOutlineIcon } from '@components/Icons';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';

@@ -7,7 +7,7 @@ import {
   MessageQuestionCircleOutlineIcon,
   MessageQuestionSquareOutlineIcon,
   XCloseOutlineIcon
-} from 'newtral-icons';
+} from '@components/Icons';
 import { FeaturedIcon } from './FeaturedIcon';
 import { StateEnum } from '@enums/common';
 import Link from 'next/link';

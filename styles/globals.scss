@@ -16,11 +16,11 @@ a {
 
 @layer utilities {
   .btn-secondary {
-    @apply bg-primary-50 text-primary-700 border-solid border-primary-50 shadow-xs hover:bg-primary-100 hover:border-primary-100  hover:text-primary-800  focus:shadow-primary-100 disabled:bg-primary-25 disabled:border-primary-25 disabled:text-primary-300;
+    @apply bg-primary-50 text-primary-700 border-solid border-primary-50 shadow-sm hover:bg-primary-100 hover:border-primary-100  hover:text-primary-800  focus:shadow-primary-100 disabled:bg-primary-25 disabled:border-primary-25 disabled:text-primary-300;
   }
 
   .btn-primary {
-    @apply bg-primary-600 text-white border-solid border-primary-600 shadow-xs hover:bg-primary-700 hover:border-primary-700  focus:shadow-primary-100 disabled:bg-primary-200 disabled:border-primary-200;
+    @apply bg-primary-600 text-white border-solid border-primary-600 shadow-sm hover:bg-primary-700 hover:border-primary-700  focus:shadow-primary-100 disabled:bg-primary-200 disabled:border-primary-200;
   }
 
   .btn-tertiary {
@@ -28,7 +28,7 @@ a {
   }
 
   .btn-secondary-gray {
-    @apply bg-white shadow-xs border-solid border-gray-300 text-gray-700
+    @apply bg-white shadow-sm border-solid border-gray-300 text-gray-700
     hover:bg-gray-50 hover:text-gray-800 focus:shadow-gray-100 disabled:text-gray-300;
   }
 

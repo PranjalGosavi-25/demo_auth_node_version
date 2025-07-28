@@ -1,8 +1,7 @@
 import {
   Building07OutlineIcon,
-  CheckCircleOutlineIcon,
-  SwitchHorizontal01OutlineIcon
-} from 'newtral-icons';
+  CheckCircleOutlineIcon
+} from '@components/Icons';
 import { OnboardingLayout } from '../OnboardingLayout';
 import { useRouter } from 'next/router';
 import { CompanyAccountTypeEnum, SupplierTypeEnum } from '@enums/common';
@@ -102,7 +101,7 @@ export const CollectionAndSharing = (props: {
             <Building07OutlineIcon className="text-white" />
             <p className="text-lg">{tokenData?.company?.referralCompanyName}</p>
           </div>
-          <SwitchHorizontal01OutlineIcon className="text-white" />
+          {/* Icon removed: SwitchHorizontal01OutlineIcon does not exist */}
           <div className="flex items-center gap-2">
             <Building07OutlineIcon className="text-white" />
             <p className="text-lg">{tokenData?.company?.name}</p>
@@ -119,8 +118,7 @@ export const CollectionAndSharing = (props: {
             >
               <CheckCircleOutlineIcon
                 className="text-primary-600"
-                width={24}
-                height={24}
+                size={24}
               />
 
               <p className="text-gray-600 font-normal text-md">
@@ -144,8 +142,7 @@ export const CollectionAndSharing = (props: {
                   {
                     <data.icon
                       className="text-primary-600"
-                      width={24}
-                      height={24}
+                      size={24}
                     />
                   }
                   <p className="text-gray-600 font-normal text-md">

@@ -8,7 +8,7 @@ import {
   ArrowRightOutlineIcon,
   Building07OutlineIcon,
   ClockOutlineIcon
-} from 'newtral-icons';
+} from '@components/Icons';
 import VCPOnboardingLayout from '@components/Onboarding/VCPOnboarding/VCPOnboardingLayout';
 import dayjs from 'dayjs';
 

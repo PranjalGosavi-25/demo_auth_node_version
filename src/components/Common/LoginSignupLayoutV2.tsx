@@ -1,7 +1,7 @@
 import TrustedBy from '@components/Common/TrustedBy';
 import { CALCOM_LINKS } from '@constants/common';
 import { Button, Divider } from 'antd';
-import { ArrowUpRightOutlineIcon, HelpCircleOutlineIcon } from 'newtral-icons';
+import { ArrowUpRightOutlineIcon, HelpCircleOutlineIcon } from '@components/Icons';
 import React from 'react';
 
 function LoginSignUpLayoutV2(props: {
@@ -17,7 +17,7 @@ function LoginSignUpLayoutV2(props: {
           <img src="/images/newtral-text-logo.svg" alt="" />
         </div>
         <div className="flex items-center w-fit" title="Help">
-          <HelpCircleOutlineIcon
+          <span
             className="text-gray-900 cursor-pointer"
             onClick={() => {
               if (window.Intercom) {
@@ -26,7 +26,9 @@ function LoginSignUpLayoutV2(props: {
                 window.open('https://help.newtral.io', '_blank');
               }
             }}
-          />
+          >
+            <HelpCircleOutlineIcon />
+          </span>
         </div>
       </div>
       <section className="bg-transparent w-3/5 p-16 pr-0 sm:flex flex-col justify-between hidden">

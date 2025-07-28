@@ -1,4 +1,4 @@
-import { CheckCircleOutlineIcon } from 'newtral-icons';
+import { CheckCircleOutlineIcon } from '@components/Icons';
 import { useRouter } from 'next/router';
 import { OnboardingLayout } from '@components/Onboarding/OnboardingLayout';
 import { AuthService } from '@services/AuthService';
@@ -52,8 +52,7 @@ export const InviteCompleted = (props: { totalSteps: number }) => {
         {
           <CheckCircleOutlineIcon
             className="text-primary-600"
-            width={24}
-            height={24}
+            size={24}
           />
         }
 

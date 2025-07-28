@@ -1,4 +1,4 @@
-import { CheckCircleOutlineIcon } from 'newtral-icons';
+import { CheckCircleOutlineIcon } from '@components/Icons';
 import { useRouter } from 'next/router';
 import { CompanyAccountTypeEnum, SupplierTypeEnum } from '@enums/common';
 import { OnboardingLayout } from '@components/Onboarding/OnboardingLayout';
@@ -115,8 +115,7 @@ export const NewtralPlatformDetail = (props: {
               {
                 <CheckCircleOutlineIcon
                   className="text-primary-600"
-                  width={24}
-                  height={24}
+                  size={24}
                 />
               }
               <p className="text-gray-600 font-normal text-md"> {data.text}</p>

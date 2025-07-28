@@ -1,5 +1,5 @@
 import { Avatar, Button, Divider } from 'antd';
-import { HelpCircleOutlineIcon } from 'newtral-icons';
+import { HelpCircleOutlineIcon } from '@components/Icons';
 import React from 'react';
 
 function SelfServeOnboardingLayout(props: {
@@ -25,7 +25,7 @@ function SelfServeOnboardingLayout(props: {
           <img src="/images/newtral-white.svg" alt="" />
         </div>
         <div className="flex items-center w-fit" title="Help">
-          <HelpCircleOutlineIcon
+          <span
             className="text-white cursor-pointer"
             onClick={() => {
               if (window.Intercom) {
@@ -34,7 +34,9 @@ function SelfServeOnboardingLayout(props: {
                 window.open('https://help.newtral.io', '_blank');
               }
             }}
-          />
+          >
+            <HelpCircleOutlineIcon />
+          </span>
         </div>
       </div>
 

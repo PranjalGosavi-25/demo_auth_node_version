@@ -3,7 +3,7 @@ import { FormikProps } from 'formik';
 import { CompanyOnboardingTemplate } from './CompanyOnboardingTemplate';
 import { Button, Input, Typography } from 'antd';
 import { FormField } from '@components/Common';
-import { EyeOutlineIcon } from 'newtral-icons';
+import { EyeOutlineIcon } from '@components/Icons';
 
 export const CompanyOnboardingStepOne = (props: {
   form: FormikProps<ICompanyOnboardingStepOneForm>;

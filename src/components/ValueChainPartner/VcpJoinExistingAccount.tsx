@@ -1,5 +1,5 @@
 import { Button, Typography } from 'antd';
-import { ArrowRightOutlineIcon } from 'newtral-icons';
+import { ArrowRightOutlineIcon } from '@components/Icons';
 
 export const VcpJoinExistingAccount = (props: {
   data: any;

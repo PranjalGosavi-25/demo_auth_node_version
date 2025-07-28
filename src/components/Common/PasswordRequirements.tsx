@@ -1,6 +1,6 @@
 import { CommonUtils } from '@utils/common';
 import { Typography } from 'antd';
-import { CheckCircleOutlineIcon, XOutlineIcon } from 'newtral-icons';
+import { CheckCircleOutlineIcon, XOutlineIcon } from '@components/Icons';
 import { useMemo } from 'react';
 
 export const PasswordRequirements = (props: { password: string }) => {

@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router';
 import SelfServeOnboardingLayout from '../SelfServeOnboardingLayout';
 import dayjs from 'dayjs';
-import { Building07OutlineIcon } from 'newtral-icons';
+import { Building07OutlineIcon } from '@components/Icons';
 import { CustomerIoUtils } from '@utils/cutomerio';
 
 export const InvitationDetail = (props: {

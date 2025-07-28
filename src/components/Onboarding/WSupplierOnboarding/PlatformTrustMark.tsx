@@ -1,4 +1,4 @@
-import { CheckCircleOutlineIcon } from 'newtral-icons';
+import { CheckCircleOutlineIcon } from '@components/Icons';
 import { OnboardingLayout } from '../OnboardingLayout';
 import { useRouter } from 'next/router';
 import { CompanyAccountTypeEnum, SupplierTypeEnum } from '@enums/common';
